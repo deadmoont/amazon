@@ -12,6 +12,8 @@ import ProductSlider from '@/components/shared/product/product-slider'
 import Rating from '@/components/shared/product/rating'
 import BrowsingHistoryList from '@/components/shared/browsing-history-list'
 import AddToBrowsingHistory from '@/components/shared/product/add-to-browsing-history'
+import { generateId, round2 } from '@/lib/utils'
+import AddToCart from '@/components/shared/product/add-to-cart'
 
 export async function generateMetadata(props: {
   params: Promise<{ slug: string }>
@@ -117,7 +119,7 @@ export default async function ProductDetails(props: {
                   </div>
                 )}
 
-                {/* {product.countInStock !== 0 && (
+                {product.countInStock !== 0 && (
                   <div className='flex justify-center items-center'>
                     <AddToCart
                       item={{
@@ -135,7 +137,7 @@ export default async function ProductDetails(props: {
                       }}
                     />
                   </div>
-                )} */}
+                )}
               </CardContent>
             </Card>
           </div>

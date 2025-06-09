@@ -1,7 +1,7 @@
 import Footer from "@/components/shared/footer"
 import Header from "@/components/shared/header"
 
-export default async function HomeLayout({
+export default function HomeLayout({
     children,
 }:{
     children: React.ReactNode
