@@ -1,5 +1,78 @@
-import { Data , IProductInput } from "@/types"
+import { Data , IProductInput , IUserInput } from "@/types"
 import { toSlug } from "./utils"
+import bcrypt from 'bcryptjs'
+
+const users: IUserInput[] = [
+  {
+    name: 'Admin',
+    email: 'admin@gmail.com',
+    password: bcrypt.hashSync('123456', 5),
+    role: 'Admin',
+    address: {
+      fullName: 'Admin Gautam',
+      street: '111 Main St',
+      city: 'New Delhi',
+      province: 'NY',
+      postalCode: '848220',
+      country: 'India',
+      phone: '1234567890',
+    },
+    paymentMethod: 'Stripe',
+    emailVerified: false,
+  },
+  {
+    name: 'Grish',
+    email: 'grish@gmail.com',
+    password: bcrypt.hashSync('123456', 5),
+    role: 'User',
+    address: {
+      fullName: 'Grish Gautam',
+      street: '222 Main St',
+      city: 'New Delhi',
+      province: 'NY',
+      postalCode: '123456',
+      country: 'India',
+      phone: '1234567890',
+    },
+    paymentMethod: 'Cash On Delivery',
+    emailVerified: false,
+  },
+  {
+    name: 'Priyam',
+    email: 'priyam@gmail.com',
+    password: bcrypt.hashSync('123456', 5),
+    role: 'User',
+    address: {
+      fullName: 'Priyam Chakrabarty',
+      street: '333 Main St',
+      city: 'New Delhi',
+      province: 'NY',
+      postalCode: '123456',
+      country: 'India',
+      phone: '1234567890',
+    },
+    paymentMethod: 'PayPal',
+    emailVerified: false,
+  },
+  {
+    name: 'Ritesh',
+    email: 'ritesh@gmail.com',
+    password: bcrypt.hashSync('123456', 5),
+    role: 'User',
+    address: {
+      fullName: 'Ritesh Narayan Das',
+      street: '444 Main St',
+      city: 'New Delhi',
+      province: 'NY',
+      postalCode: '123456',
+      country: 'India',
+      phone: '1234567890',
+    },
+    paymentMethod: 'Cash On Delivery',
+    emailVerified: false,
+  },
+  
+]
 
 
 const products: IProductInput[] = [
@@ -709,6 +782,7 @@ const products: IProductInput[] = [
 ]
 
 const data : Data = {
+    users,
     products,
     headerMenus: [
     {
