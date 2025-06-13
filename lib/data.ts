@@ -51,7 +51,7 @@ const users: IUserInput[] = [
       country: 'India',
       phone: '1234567890',
     },
-    paymentMethod: 'PayPal',
+    paymentMethod: 'Paypal',
     emailVerified: false,
   },
   {
